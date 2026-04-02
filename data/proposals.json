@@ -270,8 +270,9 @@
       "SQLite"
     ],
     "effort": "medium",
-    "status": "pending",
-    "createdAt": "2026-04-02"
+    "status": "rejected",
+    "createdAt": "2026-04-02",
+    "decidedAt": "2026-04-02"
   },
   {
     "id": "prop-033",
