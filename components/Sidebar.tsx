@@ -26,7 +26,7 @@ const NAV_SECTIONS: NavSection[] = [
     label: "WORK",
     items: [
       { id: "projects", label: "Projects" },
-      { id: "proposals", label: "Proposals" },
+      { id: "proposals", label: "🗂 Proposals", href: "/proposals" },
       { id: "tasks", label: "Tasks", href: "/tasks" },
       { id: "actions", label: "Actions" },
     ],
