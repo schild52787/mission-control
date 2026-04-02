@@ -325,7 +325,8 @@
       "Next.js dashboard"
     ],
     "effort": "high",
-    "status": "pending",
-    "createdAt": "2026-04-02"
+    "status": "accepted",
+    "createdAt": "2026-04-02",
+    "decidedAt": "2026-04-02"
   }
 ]

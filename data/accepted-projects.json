@@ -147,5 +147,23 @@
     "status": "accepted",
     "createdAt": "2026-04-02",
     "decidedAt": "2026-04-02"
+  },
+  {
+    "id": "prop-035",
+    "category": "personal",
+    "emoji": "🌐",
+    "title": "Multi-Agent Autonomous Research System",
+    "description": "A fleet of specialized AI agents that run continuously in the background, each monitoring a domain and surfacing insights. Agent 1: AI/tech landscape — tracks model releases, papers, tools, flags what's relevant to your work. Agent 2: Travel deals — monitors Delta award space, hotel availability, cash prices for your target destinations. Agent 3: Financial markets — watches key indicators, alerts on significant moves. Agent 4: Arsenal — monitors transfer news credibility scores, injury updates. Agents collaborate: \"Delta just dropped award space on the exact dates of your Italy trip — here are the options.\" Built on OpenClaw's multi-agent infrastructure you just unlocked.",
+    "stack": [
+      "OpenClaw cron",
+      "Claude subagents",
+      "Brave Search",
+      "Amadeus API",
+      "Next.js dashboard"
+    ],
+    "effort": "high",
+    "status": "accepted",
+    "createdAt": "2026-04-02",
+    "decidedAt": "2026-04-02"
   }
 ]
