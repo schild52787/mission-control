@@ -119,5 +119,11 @@
     "status": "done",
     "completedAt": "2026-02-27T00:00:00Z",
     "port": 3011
+  },
+  {
+    "id": "prop-026",
+    "title": "Second Brain \u2014 AI Knowledge OS",
+    "status": "building",
+    "startedAt": "2026-04-02T23:37:35.122166+00:00"
   }
 ]

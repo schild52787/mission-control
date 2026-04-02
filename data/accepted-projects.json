@@ -111,5 +111,41 @@
     "status": "accepted",
     "createdAt": "2026-02-26",
     "decidedAt": "2026-02-26"
+  },
+  {
+    "id": "prop-026",
+    "category": "personal",
+    "emoji": "🧠",
+    "title": "Second Brain — AI Knowledge OS",
+    "description": "A personal knowledge management system that ingests everything you consume — articles you read, YouTube videos you watch, podcasts you listen to, books you finish — and builds a searchable, connected knowledge graph. Ask it \"what do I know about transfer pricing?\" or \"what have I learned about sleep?\" and get a synthesis of YOUR accumulated knowledge, not the internet's. Includes spaced repetition for things worth retaining, auto-tagging, and weekly insight digests. Built on top of your existing memory files.",
+    "stack": [
+      "Next.js",
+      "TypeScript",
+      "SQLite/vector DB",
+      "OpenAI embeddings",
+      "Claude"
+    ],
+    "effort": "high",
+    "status": "accepted",
+    "createdAt": "2026-04-02",
+    "decidedAt": "2026-04-02"
+  },
+  {
+    "id": "prop-028",
+    "category": "health",
+    "emoji": "🏋️",
+    "title": "Adaptive Training Coach — Injury-Aware AI",
+    "description": "A full AI coaching system that generates your weekly training program in real-time, adapting to your exact injury profile (C5-C6/C6-C7 discs, bilateral AC joints, right knee, right ankle). Not generic — it knows your PRs, your history, your bad days. Each morning it asks: how's the neck? How'd you sleep? Then generates today's session with substitutions pre-loaded. Tracks progressive overload week over week, flags when you're pushing too hard, integrates PT exercises into the program rather than treating them as separate. Apple Health sync for HRV and sleep data.",
+    "stack": [
+      "React PWA",
+      "TypeScript",
+      "Apple HealthKit",
+      "Claude",
+      "SQLite"
+    ],
+    "effort": "high",
+    "status": "accepted",
+    "createdAt": "2026-04-02",
+    "decidedAt": "2026-04-02"
   }
 ]
