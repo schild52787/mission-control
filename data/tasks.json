@@ -1,0 +1,52 @@
+[
+  {
+    "id": "task-001",
+    "title": "Pick Amalfi Coast hotel",
+    "description": "Choose between Poseidon, Santa Caterina, Tritone — under $1000/night for family of 4",
+    "assignee": "kyle",
+    "status": "backlog",
+    "priority": "high",
+    "createdAt": "2026-03-03",
+    "updatedAt": "2026-03-03"
+  },
+  {
+    "id": "task-002",
+    "title": "Restart browser relay",
+    "description": "Run: openclaw gateway restart — needed for hotel price verification",
+    "assignee": "kyle",
+    "status": "backlog",
+    "priority": "high",
+    "createdAt": "2026-03-03",
+    "updatedAt": "2026-03-03"
+  },
+  {
+    "id": "task-003",
+    "title": "Book Felice a Testaccio",
+    "description": "feliceatestaccio.com — Rome dinner reservation, fills extremely fast",
+    "assignee": "kyle",
+    "status": "backlog",
+    "priority": "high",
+    "createdAt": "2026-03-03",
+    "updatedAt": "2026-03-03"
+  },
+  {
+    "id": "task-004",
+    "title": "Verify GUC fare bucket eligibility",
+    "description": "Call Diamond Medallion Desk — confirm GIXFOB fare class is GUC-upgradable on DL298 MSP-FCO",
+    "assignee": "kyle",
+    "status": "backlog",
+    "priority": "medium",
+    "createdAt": "2026-03-03",
+    "updatedAt": "2026-03-03"
+  },
+  {
+    "id": "task-005",
+    "title": "Build Task Board + Schedule + Memory + Docs",
+    "description": "Mission Control features inspired by YouTube video",
+    "assignee": "claw",
+    "status": "done",
+    "priority": "medium",
+    "createdAt": "2026-03-03",
+    "updatedAt": "2026-03-04"
+  }
+]

@@ -1,0 +1,115 @@
+[
+  {
+    "id": "prop-007",
+    "category": "personal",
+    "emoji": "🇮🇹",
+    "title": "Italy Trip Planner PWA",
+    "description": "Day-by-day itinerary app for Aug 12–26. Packing list, restaurant reservations, transfer times, activity slots. Offline-capable so it works without data in Italy.",
+    "stack": [
+      "React/Vite",
+      "TypeScript"
+    ],
+    "effort": "low",
+    "status": "accepted",
+    "createdAt": "2026-02-24",
+    "decidedAt": "2026-02-24"
+  },
+  {
+    "id": "prop-008",
+    "category": "personal",
+    "emoji": "🔔",
+    "title": "Delta Award Alert Bot",
+    "description": "Monitors AwardFares for low-mile availability on your watchlist routes (MSP→CUN, MSP→SJD, MSP→MBJ). Sends Telegram alert the moment a deal drops — especially around school breaks.",
+    "stack": [
+      "Python",
+      "AwardFares API",
+      "Telegram Bot"
+    ],
+    "effort": "medium",
+    "status": "accepted",
+    "createdAt": "2026-02-24",
+    "decidedAt": "2026-02-24"
+  },
+  {
+    "id": "prop-010",
+    "category": "personal",
+    "emoji": "🏆",
+    "title": "Arsenal Season Tracker — Deep Stats",
+    "description": "Extends the Intelligence Dashboard with xG charts, progressive passes, pressure maps, and player heatmaps via FBref/Understat scraping. Season-long trend lines.",
+    "stack": [
+      "React/Vite",
+      "Python scraper",
+      "Chart.js"
+    ],
+    "effort": "medium",
+    "status": "accepted",
+    "createdAt": "2026-02-24",
+    "decidedAt": "2026-02-24"
+  },
+  {
+    "id": "prop-011",
+    "category": "personal",
+    "emoji": "🧠",
+    "title": "3am Brain Dump — Insomnia Capture App",
+    "description": "Minimal, instant-open PWA for your 3-5am racing mind. One tap to start voice or typed capture. Auto-tags entries (work idea / personal / urgent / random). Syncs to daily notes. Built for one-handed use in the dark — no friction, no menus. Good ideas shouldn't die at 3am.",
+    "stack": [
+      "React PWA",
+      "Web Speech API",
+      "localStorage"
+    ],
+    "effort": "low",
+    "status": "accepted",
+    "createdAt": "2026-02-24",
+    "decidedAt": "2026-02-24"
+  },
+  {
+    "id": "prop-012",
+    "category": "personal",
+    "emoji": "⭐",
+    "title": "Elle's Reading Stars — Gamified Tracker",
+    "description": "Visual reading progress tracker for Elle. Shows Heart Words mastered as a constellation, earns a Lego brick for each session (she hyperfocuses on Legos — use this). Reads-aloud confirmation, parent-side logging. ADHD-inattentive optimized: big rewards, short sessions, no failure states.",
+    "stack": [
+      "React PWA",
+      "TypeScript",
+      "Canvas API"
+    ],
+    "effort": "low",
+    "status": "accepted",
+    "createdAt": "2026-02-24",
+    "decidedAt": "2026-02-24"
+  },
+  {
+    "id": "prop-002",
+    "category": "work",
+    "emoji": "⚖️",
+    "title": "Tax Research MCP Server",
+    "description": "FastMCP server exposing IRC section lookup, OECD guideline search, PLR/case law retrieval, and GILTI/Subpart F quick calcs. Plugs directly into your Claude Code workflows.",
+    "stack": [
+      "FastMCP",
+      "Python",
+      "uv"
+    ],
+    "effort": "medium",
+    "status": "accepted",
+    "createdAt": "2026-02-24",
+    "decidedAt": "2026-02-24"
+  },
+  {
+    "id": "prop-016",
+    "category": "work",
+    "emoji": "🧠",
+    "title": "Abacus AI Training Hub",
+    "description": "Interactive training PWA for getting up to speed on Abacus AI — both ChatLLM (multi-model interface) and DeepAgent (autonomous agent). Module-based: what it is, model selection guide, RAG chatbots, DeepAgent workflows, data privacy rules, and Cargill-specific tax use cases. Includes quizzes, practical exercises, and step-by-step guides. Built for onboarding your tax org team.",
+    "stack": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "PWA"
+    ],
+    "effort": "medium",
+    "port": 3011,
+    "status": "accepted",
+    "createdAt": "2026-02-26",
+    "decidedAt": "2026-02-26"
+  }
+]

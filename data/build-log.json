@@ -1,0 +1,123 @@
+[
+  {
+    "id": "prop-011",
+    "title": "3am Brain Dump",
+    "port": 3007,
+    "dir": "brain-dump-app",
+    "status": "complete",
+    "startedAt": "2026-02-24T20:12:56.140418",
+    "completedAt": "2026-02-25T08:38:00.000000"
+  },
+  {
+    "id": "prop-012",
+    "title": "Elle's Reading Stars",
+    "port": 3008,
+    "dir": "reading-stars-app",
+    "status": "complete",
+    "startedAt": "2026-02-24T20:12:56.140425",
+    "completedAt": "2026-02-25T08:38:00.000000"
+  },
+  {
+    "id": "prop-007",
+    "title": "Italy Trip Planner PWA",
+    "port": 3009,
+    "dir": "italy-planner-app",
+    "status": "complete",
+    "startedAt": "2026-02-24T20:12:56.140426",
+    "completedAt": "2026-02-25T08:38:00.000000"
+  },
+  {
+    "id": "prop-008",
+    "title": "Delta Award Alert Bot",
+    "port": null,
+    "dir": "delta-award-bot",
+    "status": "complete",
+    "startedAt": "2026-02-25T08:38:00.000000",
+    "completedAt": "2026-02-25T08:44:49.000000"
+  },
+  {
+    "id": "prop-010a",
+    "title": "Arsenal Deep Stats (tabs UI)",
+    "port": 3010,
+    "dir": "arsenal-deep-stats",
+    "status": "complete",
+    "startedAt": "2026-02-25T09:29:00.000000",
+    "completedAt": "2026-02-25T11:15:52.000000"
+  },
+  {
+    "id": "prop-010b",
+    "title": "Arsenal Season Tracker (routes UI)",
+    "port": null,
+    "dir": "arsenal-season-tracker",
+    "status": "complete",
+    "startedAt": "2026-02-25T09:29:00.000000",
+    "completedAt": "2026-02-25T11:20:06.000000"
+  },
+  {
+    "id": "prop-002",
+    "title": "Tax Research MCP Server",
+    "port": null,
+    "dir": "tax-research-mcp",
+    "status": "complete",
+    "startedAt": "2026-02-26T16:06:45.235Z",
+    "completedAt": "2026-02-26T16:12:33.156Z"
+  },
+  {
+    "id": "abacus-training",
+    "title": "Abacus AI Training Hub",
+    "port": 3011,
+    "dir": "abacus-training",
+    "status": "complete",
+    "startedAt": null,
+    "completedAt": "2026-02-26T16:18:08.812Z"
+  },
+  {
+    "id": "prop-017",
+    "title": "PT Daily Protocol \u2014 Spine & Shoulder",
+    "port": 3012,
+    "dir": "pt-daily-protocol",
+    "status": "complete",
+    "startedAt": "2026-02-27T05:01:02.944369+00:00",
+    "completedAt": "2026-02-26T23:59:00.000Z"
+  },
+  {
+    "id": "prop-006",
+    "title": "FitTrack MCP Server",
+    "port": null,
+    "dir": "fittrack-mcp",
+    "status": "complete",
+    "startedAt": "2026-02-27T05:01:02.944369+00:00",
+    "completedAt": "2026-02-26T23:10:00.000000"
+  },
+  {
+    "id": "playwright-award-scraper",
+    "title": "Playwright Award Price Scraper",
+    "port": 3020,
+    "dir": "award-scraper",
+    "status": "complete",
+    "startedAt": "2026-02-27T05:01:02.944369+00:00",
+    "completedAt": "2026-02-27T05:08:00.000000Z"
+  },
+  {
+    "id": "mission-control-pages",
+    "title": "Mission Control \u2014 Task Board, Schedule, Memory Browser, Docs",
+    "port": null,
+    "dir": "mission-control",
+    "status": "complete",
+    "startedAt": null,
+    "completedAt": "2026-03-03T20:19:11.000Z"
+  },
+  {
+    "id": "prop-010",
+    "title": "Arsenal Season Tracker \u2014 Deep Stats",
+    "status": "done",
+    "startedAt": "2026-03-31T22:02:56.632165+00:00",
+    "completedAt": "2026-02-27T00:00:00Z"
+  },
+  {
+    "id": "prop-016",
+    "status": "done",
+    "completedAt": "2026-02-27T00:00:00Z",
+    "port": 3011
+  }
+]

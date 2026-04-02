@@ -1,0 +1,431 @@
+[
+  {
+    "id": "prop-001",
+    "category": "work",
+    "emoji": "\ud83d\udcca",
+    "title": "Entity Valuation Agent \u2014 Web UI",
+    "description": "Dashboard for your Bloomberg-connected valuation agent. Upload comparables, trigger analysis, view formatted output. Connects to the Python backend you're already building.",
+    "stack": [
+      "React/Vite",
+      "Python FastAPI",
+      "Bloomberg API"
+    ],
+    "effort": "medium",
+    "status": "rejected",
+    "createdAt": "2026-02-24",
+    "decidedAt": "2026-02-26"
+  },
+  {
+    "id": "prop-002",
+    "category": "work",
+    "emoji": "\u2696\ufe0f",
+    "title": "Tax Research MCP Server",
+    "description": "FastMCP server exposing IRC section lookup, OECD guideline search, PLR/case law retrieval, and GILTI/Subpart F quick calcs. Plugs directly into your Claude Code workflows.",
+    "stack": [
+      "FastMCP",
+      "Python",
+      "uv"
+    ],
+    "effort": "medium",
+    "status": "deployed",
+    "createdAt": "2026-02-24",
+    "decidedAt": "2026-02-24"
+  },
+  {
+    "id": "prop-003",
+    "category": "work",
+    "emoji": "\ud83e\uddf9",
+    "title": "TP Sanitizer \u2014 Drag & Drop UI",
+    "description": "Web front-end for your transfer pricing doc sanitization tool. Drag in a PDF/DOCX, preview redactions, download sanitized version. Keeps everything local \u2014 no external API calls.",
+    "stack": [
+      "React/Vite",
+      "Python",
+      "spaCy"
+    ],
+    "effort": "low",
+    "status": "rejected",
+    "createdAt": "2026-02-24",
+    "decidedAt": "2026-02-26"
+  },
+  {
+    "id": "prop-004",
+    "category": "work",
+    "emoji": "\ud83e\uddee",
+    "title": "GILTI / Subpart F Calculator",
+    "description": "Multi-CFC GILTI and Subpart F income calculator with \u00a7951A high-tax exclusion, QBAI/NTEI inputs, \u00a7861 expense allocation, and tested income/loss netting across EMEA entities.",
+    "stack": [
+      "React/Vite",
+      "TypeScript"
+    ],
+    "effort": "high",
+    "status": "rejected",
+    "createdAt": "2026-02-24",
+    "decidedAt": "2026-02-24"
+  },
+  {
+    "id": "prop-005",
+    "category": "personal",
+    "emoji": "\ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67\u200d\ud83d\udc66",
+    "title": "Family Command Center MCP",
+    "description": "MCP server for kid routines, meal planning, and family schedule coordination. Daily briefings auto-include kid dropoff/pickup, Melissa's travel days, and dinner planning.",
+    "stack": [
+      "FastMCP",
+      "Python",
+      "Google Calendar API"
+    ],
+    "effort": "medium",
+    "status": "rejected",
+    "createdAt": "2026-02-24",
+    "decidedAt": "2026-02-26"
+  },
+  {
+    "id": "prop-006",
+    "category": "personal",
+    "emoji": "\ud83c\udfcb\ufe0f",
+    "title": "FitTrack MCP Server",
+    "description": "MCP server for workout logging, PT exercise tracking, and hydration. Connects FitTrack PWA data to Claude so I can proactively suggest workouts filtered through your injury profile.",
+    "stack": [
+      "FastMCP",
+      "Python",
+      "SQLite"
+    ],
+    "effort": "low",
+    "status": "deployed",
+    "createdAt": "2026-02-24",
+    "decidedAt": "2026-02-27T05:01:02.944369+00:00",
+    "port": 3001
+  },
+  {
+    "id": "prop-007",
+    "category": "personal",
+    "emoji": "\ud83c\uddee\ud83c\uddf9",
+    "title": "Italy Trip Planner PWA",
+    "description": "Day-by-day itinerary app for Aug 12\u201326. Packing list, restaurant reservations, transfer times, activity slots. Offline-capable so it works without data in Italy.",
+    "stack": [
+      "React/Vite",
+      "TypeScript"
+    ],
+    "effort": "low",
+    "status": "deployed",
+    "createdAt": "2026-02-24",
+    "decidedAt": "2026-02-24",
+    "port": 3009
+  },
+  {
+    "id": "prop-008",
+    "category": "personal",
+    "emoji": "\ud83d\udd14",
+    "title": "Delta Award Alert Bot",
+    "description": "Monitors AwardFares for low-mile availability on your watchlist routes (MSP\u2192CUN, MSP\u2192SJD, MSP\u2192MBJ). Sends Telegram alert the moment a deal drops \u2014 especially around school breaks.",
+    "stack": [
+      "Python",
+      "AwardFares API",
+      "Telegram Bot"
+    ],
+    "effort": "medium",
+    "status": "deployed",
+    "createdAt": "2026-02-24",
+    "decidedAt": "2026-02-24"
+  },
+  {
+    "id": "prop-009",
+    "category": "work",
+    "emoji": "\ud83d\udcc8",
+    "title": "Interest Expense Allocation Dashboard",
+    "description": "\u00a7861 interest expense allocation calculator with asset basis inputs, average asset method vs. modified gross income method toggle, and CFC group allocation output.",
+    "stack": [
+      "React/Vite",
+      "TypeScript"
+    ],
+    "effort": "high",
+    "status": "rejected",
+    "createdAt": "2026-02-24",
+    "decidedAt": "2026-02-24"
+  },
+  {
+    "id": "prop-010",
+    "category": "personal",
+    "emoji": "\ud83c\udfc6",
+    "title": "Arsenal Season Tracker \u2014 Deep Stats",
+    "description": "Extends the Intelligence Dashboard with xG charts, progressive passes, pressure maps, and player heatmaps via FBref/Understat scraping. Season-long trend lines.",
+    "stack": [
+      "React/Vite",
+      "Python scraper",
+      "Chart.js"
+    ],
+    "effort": "medium",
+    "status": "deployed",
+    "createdAt": "2026-02-24",
+    "decidedAt": "2026-02-24",
+    "port": 3010
+  },
+  {
+    "id": "prop-011",
+    "category": "personal",
+    "emoji": "\ud83e\udde0",
+    "title": "3am Brain Dump \u2014 Insomnia Capture App",
+    "description": "Minimal, instant-open PWA for your 3-5am racing mind. One tap to start voice or typed capture. Auto-tags entries (work idea / personal / urgent / random). Syncs to daily notes. Built for one-handed use in the dark \u2014 no friction, no menus. Good ideas shouldn't die at 3am.",
+    "stack": [
+      "React PWA",
+      "Web Speech API",
+      "localStorage"
+    ],
+    "effort": "low",
+    "status": "deployed",
+    "createdAt": "2026-02-24",
+    "decidedAt": "2026-02-24",
+    "port": 3007
+  },
+  {
+    "id": "prop-012",
+    "category": "personal",
+    "emoji": "\u2b50",
+    "title": "Elle's Reading Stars \u2014 Gamified Tracker",
+    "description": "Visual reading progress tracker for Elle. Shows Heart Words mastered as a constellation, earns a Lego brick for each session (she hyperfocuses on Legos \u2014 use this). Reads-aloud confirmation, parent-side logging. ADHD-inattentive optimized: big rewards, short sessions, no failure states.",
+    "stack": [
+      "React PWA",
+      "TypeScript",
+      "Canvas API"
+    ],
+    "effort": "low",
+    "status": "deployed",
+    "createdAt": "2026-02-24",
+    "decidedAt": "2026-02-24",
+    "port": 3008
+  },
+  {
+    "id": "prop-013",
+    "category": "personal",
+    "emoji": "\ud83c\udf5d",
+    "title": "Weekly Meal Planner",
+    "description": "You do all the cooking and grocery shopping. Plan the week in 5 minutes: kids eat at 5:30 (simple), adults at 8:30 (real food). Knows Melissa's travel days. Generates a grouped grocery list by store section. Rotates favorites so you're not reinventing dinner every Sunday.",
+    "stack": [
+      "React PWA",
+      "TypeScript",
+      "Google Calendar API"
+    ],
+    "effort": "medium",
+    "status": "rejected",
+    "createdAt": "2026-02-24",
+    "decidedAt": "2026-02-24"
+  },
+  {
+    "id": "prop-014",
+    "category": "personal",
+    "emoji": "\ud83e\ude7a",
+    "title": "Radiculopathy Symptom Journal",
+    "description": "Daily log for your C5-C6/C6-C7 nerve symptoms: arm numbness, tricep pain, what triggered it, what helped. Shows weekly trend. Generates a 1-page summary you can hand a doctor or PT \u2014 concrete data beats 'my arm hurts sometimes.' Also flags correlation with specific exercises.",
+    "stack": [
+      "React PWA",
+      "TypeScript",
+      "Chart.js"
+    ],
+    "effort": "low",
+    "status": "rejected",
+    "createdAt": "2026-02-24",
+    "decidedAt": "2026-02-24"
+  },
+  {
+    "id": "prop-015",
+    "category": "work",
+    "emoji": "\ud83d\udce1",
+    "title": "International Tax Law Change Monitor",
+    "description": "Daily scan of IRS (irs.gov/newsroom), Treasury, OECD BEPS portal, and BNA/Bloomberg Tax headlines for anything touching GILTI, Subpart F, Pillar Two, and transfer pricing. More focused than the Daily Briefing. Weekly digest + instant Telegram alert when something Cargill-relevant drops.",
+    "stack": [
+      "Python",
+      "Brave Search API",
+      "Telegram Bot"
+    ],
+    "effort": "medium",
+    "status": "rejected",
+    "createdAt": "2026-02-24",
+    "decidedAt": "2026-02-24"
+  },
+  {
+    "id": "prop-016",
+    "category": "work",
+    "emoji": "\ud83e\udde0",
+    "title": "Abacus AI Training Hub",
+    "description": "Interactive training PWA for getting up to speed on Abacus AI \u2014 both ChatLLM (multi-model interface) and DeepAgent (autonomous agent). Module-based: what it is, model selection guide, RAG chatbots, DeepAgent workflows, data privacy rules, and Cargill-specific tax use cases. Includes quizzes, practical exercises, and step-by-step guides. Built for onboarding your tax org team.",
+    "stack": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "PWA"
+    ],
+    "effort": "medium",
+    "port": 3011,
+    "status": "deployed",
+    "createdAt": "2026-02-26",
+    "decidedAt": "2026-02-26"
+  },
+  {
+    "id": "prop-017",
+    "category": "health",
+    "emoji": "\ud83e\uddb4",
+    "title": "PT Daily Protocol \u2014 Spine & Shoulder",
+    "description": "Daily exercise tracker built specifically for your injury stack: C5-C6/C6-C7 disc protocol, scapular stabilization (serratus anterior + lower trap), bilateral AC joint, right bicep tendon. Each session logs pain/numbness level (0-10) in right arm/tricep, which exercises completed, and how it felt. Weekly trend charts. Tracks radiculopathy flare patterns vs. exercise load. Built around your active PT protocol.",
+    "stack": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "PWA",
+      "localStorage"
+    ],
+    "effort": "medium",
+    "port": 3012,
+    "status": "deployed",
+    "createdAt": "2026-02-26",
+    "decidedAt": "2026-02-27T05:01:02.944369+00:00"
+  },
+  {
+    "id": "prop-018",
+    "category": "family",
+    "emoji": "\ud83c\udf73",
+    "title": "Family Meal Planner",
+    "description": "Weekly meal planning built around your household: two-track (kids 5:30pm / adults 8:30pm), grocery list that auto-builds from the plan, recipe notes, and a pantry staples tracker. Kyle does all the cooking and shopping \u2014 this replaces the mental overhead of figuring out what to make. Includes a 'quick meals' bank for solo-parenting nights when Melissa travels.",
+    "stack": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "PWA",
+      "localStorage"
+    ],
+    "effort": "medium",
+    "port": 3013,
+    "status": "rejected",
+    "createdAt": "2026-02-26",
+    "decidedAt": "2026-02-26"
+  },
+  {
+    "id": "prop-019",
+    "category": "travel",
+    "emoji": "\u2708\ufe0f",
+    "title": "Delta GUC & Upgrade Tracker",
+    "description": "Track Melissa's Global Upgrade Certificates and companion certificates \u2014 which are used, which expire when, which flights are eligible, and when the upgrade window opens (domestic 24h, international varies). Alerts when a flight enters the upgrade window. Pulls from your confirmed itineraries. One-stop answer to 'do we have GUCs left and can we use one on this flight?'",
+    "stack": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "PWA",
+      "Telegram Bot"
+    ],
+    "effort": "medium",
+    "port": 3014,
+    "status": "rejected",
+    "createdAt": "2026-02-26",
+    "decidedAt": "2026-02-26"
+  },
+  {
+    "id": "prop-020",
+    "category": "health",
+    "emoji": "\ud83d\ude34",
+    "title": "Sleep Pattern Journal",
+    "description": "Lightweight nightly log: time in bed, approximate time asleep, wake time (especially the 3-5am window), mind-racing severity (0-10), Trazodone dose time, and overall quality rating. Weekly trend charts showing patterns \u2014 does mind-racing correlate with late Adderall doses? Does wakeup time correlate with alcohol or late meals? Designed to generate useful data for the eventual doctor conversation about meds.",
+    "stack": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "PWA",
+      "localStorage"
+    ],
+    "effort": "low",
+    "port": 3015,
+    "status": "rejected",
+    "createdAt": "2026-02-26",
+    "decidedAt": "2026-02-26"
+  },
+  {
+    "id": "prop-021",
+    "category": "travel",
+    "emoji": "\ud83c\udfab",
+    "title": "Transfer Bonus Alert Bot",
+    "description": "Monitors Amex MR and Chase UR transfer partner bonus deals \u2014 specifically Flying Blue (AMS\u2192MSP needs ~22,500mi; a 25-30% transfer bonus makes it ~17-18K Amex points). Checks ThriftyTraveler, VFTW, and Doctor of Credit for bonus transfer announcements. Telegram alert the moment a bonus drops. Also watches for Air France promos and Avianca promo sales. Most critical: Flying Blue bonus before the May 28 deadline.",
+    "stack": [
+      "Python",
+      "Brave Search API",
+      "Telegram Bot",
+      "LaunchAgent"
+    ],
+    "effort": "low",
+    "status": "rejected",
+    "createdAt": "2026-02-26",
+    "decidedAt": "2026-02-26"
+  },
+  {
+    "id": "prop-022",
+    "category": "travel",
+    "emoji": "\ud83e\uddf3",
+    "title": "Italy Packing PWA",
+    "description": "Smart packing list for 4 people, 15 nights, carry-on only, 4 climate zones (Amalfi heat \u2192 Tuscany/Venice evenings \u2192 Rome). Organized by person (Kyle, Melissa, Elle, Luka) and by city segment (Sorrento, Tuscany, Venice, Rome). Check-off interface. Notes on LuggAgent bag forwarding days. Includes: what to pack in the day-trip bag vs checked LuggAgent bag. Laundry day suggestions mid-trip (Tuscany).",
+    "stack": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "PWA",
+      "localStorage"
+    ],
+    "effort": "low",
+    "port": 3016,
+    "status": "rejected",
+    "createdAt": "2026-02-26",
+    "decidedAt": "2026-02-26"
+  },
+  {
+    "id": "prop-023",
+    "category": "family",
+    "emoji": "\u26bd",
+    "title": "Luka Sports Milestone Tracker",
+    "description": "Track Luka's athletic development across basketball, soccer, and football \u2014 age-appropriate skill milestones for a 5-year-old, session logs, and progression badges. Gamified like the learning app (XP, badges, streaks). Includes suggested drills for each sport by skill level. Designed for quick phone logging during or after practice. Pairs well with the Learning Companion.",
+    "stack": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "PWA",
+      "localStorage"
+    ],
+    "effort": "medium",
+    "port": 3017,
+    "status": "rejected",
+    "createdAt": "2026-02-26",
+    "decidedAt": "2026-02-26"
+  },
+  {
+    "id": "prop-024",
+    "category": "financial",
+    "emoji": "\ud83d\udcb3",
+    "title": "Annual Card Benefits Dashboard",
+    "description": "Single-page tracker for ALL your card annual credits \u2014 Amex Platinum ($200 airline, $200 hotel, $200 Uber, $240 digital, $155 Walmart+, FHR $300/half), CSR (Exclusive Tables $150/half, StubHub $150/half, Lyft $10/mo, DoorDash $25/mo), Delta Reserve (companion cert status). Shows used vs. remaining with countdown to reset dates. No more mental math on 'how much airline credit do I have left?'",
+    "stack": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "PWA",
+      "localStorage"
+    ],
+    "effort": "low",
+    "port": 3018,
+    "status": "rejected",
+    "createdAt": "2026-02-26",
+    "decidedAt": "2026-02-26"
+  },
+  {
+    "id": "prop-025",
+    "category": "sports",
+    "emoji": "\ud83d\udd34",
+    "title": "Arsenal Match Day Companion",
+    "description": "Mobile-first match day app: countdown to kickoff, confirmed lineup card (from ESPN/FotMob), live match events feed (goals, cards, subs), post-match player ratings and xG summary, and next fixture. Pulls from the Arsenal Dashboard APIs but designed for phone use on matchday \u2014 thumb-friendly, fast. One button to load live match. Notification at lineup announcement (1hr before kickoff).",
+    "stack": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "PWA",
+      "ESPN API"
+    ],
+    "effort": "medium",
+    "port": 3019,
+    "status": "rejected",
+    "createdAt": "2026-02-26",
+    "decidedAt": "2026-02-26"
+  }
+]
