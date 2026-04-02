@@ -123,7 +123,9 @@
   {
     "id": "prop-026",
     "title": "Second Brain \u2014 AI Knowledge OS",
-    "status": "building",
-    "startedAt": "2026-04-02T23:37:35.122166+00:00"
+    "status": "done",
+    "startedAt": "2026-04-02T23:37:35.122166+00:00",
+    "completedAt": "2026-04-02T23:44:58.752698+00:00",
+    "port": 3016
   }
 ]
