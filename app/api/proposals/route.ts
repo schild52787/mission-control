@@ -40,7 +40,22 @@ function appendAccepted(proposal: Proposal): void {
 }
 
 export async function GET() {
-  return NextResponse.json(readProposals());
+  const proposals = readProposals();
+  const now = Date.now();
+  const THREE_DAYS_MS = 3 * 24 * 60 * 60 * 1000;
+
+  const cleaned = proposals.filter((p) => {
+    if (p.status !== "rejected" || !p.decidedAt) return true;
+    const decidedTime = new Date(p.decidedAt).getTime();
+    return now - decidedTime < THREE_DAYS_MS;
+  });
+
+  // Persist if any were removed
+  if (cleaned.length !== proposals.length) {
+    writeProposals(cleaned);
+  }
+
+  return NextResponse.json(cleaned);
 }
 
 export async function POST(request: Request) {
