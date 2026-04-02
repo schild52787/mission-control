@@ -131,7 +131,9 @@
   {
     "id": "prop-028",
     "title": "Adaptive Training Coach \u2014 Injury-Aware AI",
-    "status": "building",
-    "startedAt": "2026-04-02T23:46:59.529359+00:00"
+    "status": "done",
+    "startedAt": "2026-04-02T23:46:59.529359+00:00",
+    "completedAt": "2026-04-02T23:54:02.037195+00:00",
+    "port": 3017
   }
 ]
