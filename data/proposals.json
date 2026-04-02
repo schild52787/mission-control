@@ -2,7 +2,7 @@
   {
     "id": "prop-002",
     "category": "work",
-    "emoji": "\u2696\ufe0f",
+    "emoji": "⚖️",
     "title": "Tax Research MCP Server",
     "description": "FastMCP server exposing IRC section lookup, OECD guideline search, PLR/case law retrieval, and GILTI/Subpart F quick calcs. Plugs directly into your Claude Code workflows.",
     "stack": [
@@ -18,7 +18,7 @@
   {
     "id": "prop-006",
     "category": "personal",
-    "emoji": "\ud83c\udfcb\ufe0f",
+    "emoji": "🏋️",
     "title": "FitTrack MCP Server",
     "description": "MCP server for workout logging, PT exercise tracking, and hydration. Connects FitTrack PWA data to Claude so I can proactively suggest workouts filtered through your injury profile.",
     "stack": [
@@ -35,9 +35,9 @@
   {
     "id": "prop-007",
     "category": "personal",
-    "emoji": "\ud83c\uddee\ud83c\uddf9",
+    "emoji": "🇮🇹",
     "title": "Italy Trip Planner PWA",
-    "description": "Day-by-day itinerary app for Aug 12\u201326. Packing list, restaurant reservations, transfer times, activity slots. Offline-capable so it works without data in Italy.",
+    "description": "Day-by-day itinerary app for Aug 12–26. Packing list, restaurant reservations, transfer times, activity slots. Offline-capable so it works without data in Italy.",
     "stack": [
       "React/Vite",
       "TypeScript"
@@ -51,9 +51,9 @@
   {
     "id": "prop-008",
     "category": "personal",
-    "emoji": "\ud83d\udd14",
+    "emoji": "🔔",
     "title": "Delta Award Alert Bot",
-    "description": "Monitors AwardFares for low-mile availability on your watchlist routes (MSP\u2192CUN, MSP\u2192SJD, MSP\u2192MBJ). Sends Telegram alert the moment a deal drops \u2014 especially around school breaks.",
+    "description": "Monitors AwardFares for low-mile availability on your watchlist routes (MSP→CUN, MSP→SJD, MSP→MBJ). Sends Telegram alert the moment a deal drops — especially around school breaks.",
     "stack": [
       "Python",
       "AwardFares API",
@@ -67,8 +67,8 @@
   {
     "id": "prop-010",
     "category": "personal",
-    "emoji": "\ud83c\udfc6",
-    "title": "Arsenal Season Tracker \u2014 Deep Stats",
+    "emoji": "🏆",
+    "title": "Arsenal Season Tracker — Deep Stats",
     "description": "Extends the Intelligence Dashboard with xG charts, progressive passes, pressure maps, and player heatmaps via FBref/Understat scraping. Season-long trend lines.",
     "stack": [
       "React/Vite",
@@ -84,9 +84,9 @@
   {
     "id": "prop-011",
     "category": "personal",
-    "emoji": "\ud83e\udde0",
-    "title": "3am Brain Dump \u2014 Insomnia Capture App",
-    "description": "Minimal, instant-open PWA for your 3-5am racing mind. One tap to start voice or typed capture. Auto-tags entries (work idea / personal / urgent / random). Syncs to daily notes. Built for one-handed use in the dark \u2014 no friction, no menus. Good ideas shouldn't die at 3am.",
+    "emoji": "🧠",
+    "title": "3am Brain Dump — Insomnia Capture App",
+    "description": "Minimal, instant-open PWA for your 3-5am racing mind. One tap to start voice or typed capture. Auto-tags entries (work idea / personal / urgent / random). Syncs to daily notes. Built for one-handed use in the dark — no friction, no menus. Good ideas shouldn't die at 3am.",
     "stack": [
       "React PWA",
       "Web Speech API",
@@ -101,9 +101,9 @@
   {
     "id": "prop-012",
     "category": "personal",
-    "emoji": "\u2b50",
-    "title": "Elle's Reading Stars \u2014 Gamified Tracker",
-    "description": "Visual reading progress tracker for Elle. Shows Heart Words mastered as a constellation, earns a Lego brick for each session (she hyperfocuses on Legos \u2014 use this). Reads-aloud confirmation, parent-side logging. ADHD-inattentive optimized: big rewards, short sessions, no failure states.",
+    "emoji": "⭐",
+    "title": "Elle's Reading Stars — Gamified Tracker",
+    "description": "Visual reading progress tracker for Elle. Shows Heart Words mastered as a constellation, earns a Lego brick for each session (she hyperfocuses on Legos — use this). Reads-aloud confirmation, parent-side logging. ADHD-inattentive optimized: big rewards, short sessions, no failure states.",
     "stack": [
       "React PWA",
       "TypeScript",
@@ -118,9 +118,9 @@
   {
     "id": "prop-016",
     "category": "work",
-    "emoji": "\ud83e\udde0",
+    "emoji": "🧠",
     "title": "Abacus AI Training Hub",
-    "description": "Interactive training PWA for getting up to speed on Abacus AI \u2014 both ChatLLM (multi-model interface) and DeepAgent (autonomous agent). Module-based: what it is, model selection guide, RAG chatbots, DeepAgent workflows, data privacy rules, and Cargill-specific tax use cases. Includes quizzes, practical exercises, and step-by-step guides. Built for onboarding your tax org team.",
+    "description": "Interactive training PWA for getting up to speed on Abacus AI — both ChatLLM (multi-model interface) and DeepAgent (autonomous agent). Module-based: what it is, model selection guide, RAG chatbots, DeepAgent workflows, data privacy rules, and Cargill-specific tax use cases. Includes quizzes, practical exercises, and step-by-step guides. Built for onboarding your tax org team.",
     "stack": [
       "React",
       "TypeScript",
@@ -136,8 +136,8 @@
   {
     "id": "prop-017",
     "category": "health",
-    "emoji": "\ud83e\uddb4",
-    "title": "PT Daily Protocol \u2014 Spine & Shoulder",
+    "emoji": "🦴",
+    "title": "PT Daily Protocol — Spine & Shoulder",
     "description": "Daily exercise tracker built specifically for your injury stack: C5-C6/C6-C7 disc protocol, scapular stabilization (serratus anterior + lower trap), bilateral AC joint, right bicep tendon. Each session logs pain/numbness level (0-10) in right arm/tricep, which exercises completed, and how it felt. Weekly trend charts. Tracks radiculopathy flare patterns vs. exercise load. Built around your active PT protocol.",
     "stack": [
       "React",
@@ -155,9 +155,9 @@
   {
     "id": "prop-026",
     "category": "personal",
-    "emoji": "\ud83e\udde0",
-    "title": "Second Brain \u2014 AI Knowledge OS",
-    "description": "A personal knowledge management system that ingests everything you consume \u2014 articles you read, YouTube videos you watch, podcasts you listen to, books you finish \u2014 and builds a searchable, connected knowledge graph. Ask it \"what do I know about transfer pricing?\" or \"what have I learned about sleep?\" and get a synthesis of YOUR accumulated knowledge, not the internet's. Includes spaced repetition for things worth retaining, auto-tagging, and weekly insight digests. Built on top of your existing memory files.",
+    "emoji": "🧠",
+    "title": "Second Brain — AI Knowledge OS",
+    "description": "A personal knowledge management system that ingests everything you consume — articles you read, YouTube videos you watch, podcasts you listen to, books you finish — and builds a searchable, connected knowledge graph. Ask it \"what do I know about transfer pricing?\" or \"what have I learned about sleep?\" and get a synthesis of YOUR accumulated knowledge, not the internet's. Includes spaced repetition for things worth retaining, auto-tagging, and weekly insight digests. Built on top of your existing memory files.",
     "stack": [
       "Next.js",
       "TypeScript",
@@ -172,7 +172,7 @@
   {
     "id": "prop-027",
     "category": "family",
-    "emoji": "\u2708\ufe0f",
+    "emoji": "✈️",
     "title": "Italy Trip Intelligence System",
     "description": "A fully autonomous Italy trip operations center. Monitors your booked flights for schedule changes, tracks GUC upgrade availability on DL298 in real-time (pings you when space opens), builds a day-by-day itinerary with restaurant reservations tracker (Felice a Testaccio, Osteria alle Testiere, etc.), packing lists per person, offline maps export, weather forecasting for each city on your route, and a live \"trip dashboard\" the whole family can view. Automatically alerts you to anything time-sensitive before August 11.",
     "stack": [
@@ -189,9 +189,9 @@
   {
     "id": "prop-028",
     "category": "health",
-    "emoji": "\ud83c\udfcb\ufe0f",
-    "title": "Adaptive Training Coach \u2014 Injury-Aware AI",
-    "description": "A full AI coaching system that generates your weekly training program in real-time, adapting to your exact injury profile (C5-C6/C6-C7 discs, bilateral AC joints, right knee, right ankle). Not generic \u2014 it knows your PRs, your history, your bad days. Each morning it asks: how's the neck? How'd you sleep? Then generates today's session with substitutions pre-loaded. Tracks progressive overload week over week, flags when you're pushing too hard, integrates PT exercises into the program rather than treating them as separate. Apple Health sync for HRV and sleep data.",
+    "emoji": "🏋️",
+    "title": "Adaptive Training Coach — Injury-Aware AI",
+    "description": "A full AI coaching system that generates your weekly training program in real-time, adapting to your exact injury profile (C5-C6/C6-C7 discs, bilateral AC joints, right knee, right ankle). Not generic — it knows your PRs, your history, your bad days. Each morning it asks: how's the neck? How'd you sleep? Then generates today's session with substitutions pre-loaded. Tracks progressive overload week over week, flags when you're pushing too hard, integrates PT exercises into the program rather than treating them as separate. Apple Health sync for HRV and sleep data.",
     "stack": [
       "React PWA",
       "TypeScript",
@@ -206,9 +206,9 @@
   {
     "id": "prop-029",
     "category": "personal",
-    "emoji": "\ud83d\udcb0",
-    "title": "Points & Rewards Maximizer \u2014 Live Intelligence",
-    "description": "A real-time rewards optimization engine that monitors your credit card spend patterns, upcoming travel, and award availability simultaneously. Tells you: \"You have a Cancun trip in December \u2014 book with companion cert + TakeOff15 on these dates for max value.\" Tracks Melissa's Diamond Choice Benefit deadlines, monitors Delta upgrade availability across all upcoming trips, alerts when sweet spot award space opens, calculates the actual dollar value of every redemption option. Replaces AwardWallet with something smarter that actually recommends actions.",
+    "emoji": "💰",
+    "title": "Points & Rewards Maximizer — Live Intelligence",
+    "description": "A real-time rewards optimization engine that monitors your credit card spend patterns, upcoming travel, and award availability simultaneously. Tells you: \"You have a Cancun trip in December — book with companion cert + TakeOff15 on these dates for max value.\" Tracks Melissa's Diamond Choice Benefit deadlines, monitors Delta upgrade availability across all upcoming trips, alerts when sweet spot award space opens, calculates the actual dollar value of every redemption option. Replaces AwardWallet with something smarter that actually recommends actions.",
     "stack": [
       "Next.js",
       "TypeScript",
@@ -223,9 +223,9 @@
   {
     "id": "prop-030",
     "category": "family",
-    "emoji": "\ud83d\udcda",
+    "emoji": "📚",
     "title": "Elle's Reading & Learning Engine",
-    "description": "A fully personalized learning platform built specifically for Elle \u2014 ADHD-inattentive, possible dyslexia, heart words, hyperfocus on Lego. Gamified reading practice that adapts to her exact level, uses her Lego obsession as the theme (build a Lego set by completing word challenges), tracks heart words mastery, includes dyslexia-friendly fonts and spacing, generates progress reports for Kyle and her teacher. Separate Luka mode for his analytical/why-questions learning style. No YouTube dependency \u2014 this IS the engaging alternative.",
+    "description": "A fully personalized learning platform built specifically for Elle — ADHD-inattentive, possible dyslexia, heart words, hyperfocus on Lego. Gamified reading practice that adapts to her exact level, uses her Lego obsession as the theme (build a Lego set by completing word challenges), tracks heart words mastery, includes dyslexia-friendly fonts and spacing, generates progress reports for Kyle and her teacher. Separate Luka mode for his analytical/why-questions learning style. No YouTube dependency — this IS the engaging alternative.",
     "stack": [
       "React PWA",
       "TypeScript",
@@ -240,9 +240,9 @@
   {
     "id": "prop-031",
     "category": "personal",
-    "emoji": "\u26bd",
+    "emoji": "⚽",
     "title": "Arsenal Deep Intelligence Terminal",
-    "description": "The most obsessive Arsenal fan dashboard ever built. Live match tracker with xG, progressive passes, pressing intensity, and heat maps. Transfer window rumor tracker with credibility ratings (filters out Fabrizio Romano vs. random tabloids). Injury tracker with expected return dates and tactical impact analysis. Season trajectory model \u2014 current points pace vs. historical title-winning seasons. Opponent scouting reports before each match. Post-match AI analysis: what went wrong, what worked, tactical shifts. Integrates with your daily briefing so Arsenal news auto-populates here.",
+    "description": "The most obsessive Arsenal fan dashboard ever built. Live match tracker with xG, progressive passes, pressing intensity, and heat maps. Transfer window rumor tracker with credibility ratings (filters out Fabrizio Romano vs. random tabloids). Injury tracker with expected return dates and tactical impact analysis. Season trajectory model — current points pace vs. historical title-winning seasons. Opponent scouting reports before each match. Post-match AI analysis: what went wrong, what worked, tactical shifts. Integrates with your daily briefing so Arsenal news auto-populates here.",
     "stack": [
       "Next.js",
       "TypeScript",
@@ -251,14 +251,15 @@
       "D3.js"
     ],
     "effort": "high",
-    "status": "pending",
-    "createdAt": "2026-04-02"
+    "status": "rejected",
+    "createdAt": "2026-04-02",
+    "decidedAt": "2026-04-02"
   },
   {
     "id": "prop-032",
     "category": "personal",
-    "emoji": "\ud83c\udf73",
-    "title": "Personal Chef OS \u2014 Meal Intelligence Platform",
+    "emoji": "🍳",
+    "title": "Personal Chef OS — Meal Intelligence Platform",
     "description": "Since you do ALL the cooking and grocery shopping, this is your culinary command center. AI-assisted weekly meal planning that accounts for two-track dinners (kids 5:30pm, adults 8:30pm), generates a single optimized grocery list, tracks pantry inventory via quick photo scan, suggests recipes based on what's about to expire. Adult dinner mode: ingredient-forward, restaurant-quality suggestions with technique guidance. Kid dinner mode: what will actually get eaten. Learns your preferences over time. Integrates with Instacart/DoorDash for one-tap ordering.",
     "stack": [
       "React PWA",
@@ -274,8 +275,8 @@
   {
     "id": "prop-033",
     "category": "personal",
-    "emoji": "\ud83e\udd16",
-    "title": "AI Career Accelerator \u2014 Data/Architecture Portfolio Builder",
+    "emoji": "🤖",
+    "title": "AI Career Accelerator — Data/Architecture Portfolio Builder",
     "description": "A structured 12-month program to build your AI/data architecture career pivot, tracked and coached by AI. Identifies the specific skill gaps between \"Senior Tax Manager who knows SAP as a user\" and \"AI Data Architect.\" Generates a learning path, tracks progress, builds projects that demonstrate enterprise data skills, coaches you on how to position your CPA+AI differentiator. Includes a portfolio site showcasing your AI builds, an interview prep module with real enterprise data architecture questions, and weekly check-ins. This is your 5-year plan made executable.",
     "stack": [
       "Next.js",
@@ -291,9 +292,9 @@
   {
     "id": "prop-034",
     "category": "family",
-    "emoji": "\ud83c\udfe0",
-    "title": "Family Operations Center \u2014 Household AI",
-    "description": "The single source of truth for running the Schildkraut household. Melissa's travel schedule synced and visible, solo parenting weeks pre-planned with logistics. Kids' school schedules, non-school days, permission slips, and upcoming events auto-ingested from school emails. Morning routine checklists for Elle and Luka (visual, gamified, timer-based). Shared grocery list, household task tracker, babysitter/grandparent coordination. Sends Kyle a \"solo parenting briefing\" the night before Melissa travels: here's what's happening tomorrow, here's the plan. Designed for ADHD working memory \u2014 everything written down, nothing in your head.",
+    "emoji": "🏠",
+    "title": "Family Operations Center — Household AI",
+    "description": "The single source of truth for running the Schildkraut household. Melissa's travel schedule synced and visible, solo parenting weeks pre-planned with logistics. Kids' school schedules, non-school days, permission slips, and upcoming events auto-ingested from school emails. Morning routine checklists for Elle and Luka (visual, gamified, timer-based). Shared grocery list, household task tracker, babysitter/grandparent coordination. Sends Kyle a \"solo parenting briefing\" the night before Melissa travels: here's what's happening tomorrow, here's the plan. Designed for ADHD working memory — everything written down, nothing in your head.",
     "stack": [
       "React PWA",
       "TypeScript",
@@ -308,9 +309,9 @@
   {
     "id": "prop-035",
     "category": "personal",
-    "emoji": "\ud83c\udf10",
+    "emoji": "🌐",
     "title": "Multi-Agent Autonomous Research System",
-    "description": "A fleet of specialized AI agents that run continuously in the background, each monitoring a domain and surfacing insights. Agent 1: AI/tech landscape \u2014 tracks model releases, papers, tools, flags what's relevant to your work. Agent 2: Travel deals \u2014 monitors Delta award space, hotel availability, cash prices for your target destinations. Agent 3: Financial markets \u2014 watches key indicators, alerts on significant moves. Agent 4: Arsenal \u2014 monitors transfer news credibility scores, injury updates. Agents collaborate: \"Delta just dropped award space on the exact dates of your Italy trip \u2014 here are the options.\" Built on OpenClaw's multi-agent infrastructure you just unlocked.",
+    "description": "A fleet of specialized AI agents that run continuously in the background, each monitoring a domain and surfacing insights. Agent 1: AI/tech landscape — tracks model releases, papers, tools, flags what's relevant to your work. Agent 2: Travel deals — monitors Delta award space, hotel availability, cash prices for your target destinations. Agent 3: Financial markets — watches key indicators, alerts on significant moves. Agent 4: Arsenal — monitors transfer news credibility scores, injury updates. Agents collaborate: \"Delta just dropped award space on the exact dates of your Italy trip — here are the options.\" Built on OpenClaw's multi-agent infrastructure you just unlocked.",
     "stack": [
       "OpenClaw cron",
       "Claude subagents",
