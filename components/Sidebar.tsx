@@ -135,7 +135,7 @@ export default function Sidebar({ activeSection, onNavigate, lastRefreshed, onRe
             </div>
             {section.items.map((item) => {
               const isActive = activeSection === item.id;
-              if (item.href && item.id === "tasks") {
+              if (item.href) {
                 return (
                   <Link
                     key={item.id}
