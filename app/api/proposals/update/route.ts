@@ -78,8 +78,26 @@ export async function PATCH(request: Request) {
     return NextResponse.json({ ok: true });
   }
 
-  // Handle status change (existing logic)
-  const { status } = body as { id: string; status: "pending" | "accepted" | "rejected" };
+  // Handle order-only update (within-column reorder)
+  if ("order" in body && !("status" in body)) {
+    proposals[idx].order = (body as { id: string; order: number }).order;
+    writeProposals(proposals);
+    return NextResponse.json({ ok: true });
+  }
+
+  // Handle mark as built
+  if ("status" in body && (body as { id: string; status: string }).status === "deployed") {
+    const builtBody = body as { id: string; status: "deployed"; builtAt: string };
+    proposals[idx].status = "deployed";
+    proposals[idx].builtAt = builtBody.builtAt;
+    proposals[idx].decidedAt = builtBody.builtAt;
+    writeProposals(proposals);
+    return NextResponse.json({ ok: true });
+  }
+
+  // Handle status change (existing logic — may include order for new acceptances)
+  const statusBody = body as { id: string; status: "pending" | "accepted" | "rejected"; order?: number };
+  const { status } = statusBody;
 
   if (!["pending", "accepted", "rejected"].includes(status)) {
     return NextResponse.json({ error: "Invalid body" }, { status: 400 });
@@ -87,6 +105,10 @@ export async function PATCH(request: Request) {
 
   const oldStatus = proposals[idx].status;
   proposals[idx].status = status;
+
+  if (statusBody.order !== undefined) {
+    proposals[idx].order = statusBody.order;
+  }
 
   if (status !== "pending") {
     proposals[idx].decidedAt = new Date().toISOString().slice(0, 10);
