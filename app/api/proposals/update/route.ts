@@ -17,7 +17,13 @@ interface Proposal {
   createdAt: string;
   decidedAt?: string;
   port?: number;
+  deleted?: boolean;
+  deletedAt?: string;
 }
+
+type PatchBody =
+  | { id: string; status: "pending" | "accepted" | "rejected" }
+  | { id: string; deleted: true };
 
 function readProposals(): Proposal[] {
   try {
@@ -41,18 +47,39 @@ function appendAccepted(proposal: Proposal): void {
 }
 
 export async function PATCH(request: Request) {
-  const { id, status } = (await request.json()) as {
-    id: string;
-    status: "pending" | "accepted" | "rejected";
-  };
+  const body = (await request.json()) as PatchBody;
+  const { id } = body;
 
-  if (!id || !["pending", "accepted", "rejected"].includes(status)) {
-    return NextResponse.json({ error: "Invalid body" }, { status: 400 });
-  }
+  if (!id) return NextResponse.json({ error: "Missing id" }, { status: 400 });
 
   const proposals = readProposals();
   const idx = proposals.findIndex((p) => p.id === id);
   if (idx === -1) return NextResponse.json({ error: "Not found" }, { status: 404 });
+
+  // Handle delete
+  if ("deleted" in body && body.deleted === true) {
+    proposals[idx].deleted = true;
+    proposals[idx].deletedAt = new Date().toISOString();
+    writeProposals(proposals);
+
+    // Remove from accepted-projects.json if present
+    try {
+      const accepted = JSON.parse(fs.readFileSync(ACCEPTED_FILE, "utf-8")) as Proposal[];
+      const filtered = accepted.filter((p) => p.id !== id);
+      if (filtered.length !== accepted.length) {
+        fs.writeFileSync(ACCEPTED_FILE, JSON.stringify(filtered, null, 2));
+      }
+    } catch { /* file may not exist */ }
+
+    return NextResponse.json({ ok: true });
+  }
+
+  // Handle status change (existing logic)
+  const { status } = body as { id: string; status: "pending" | "accepted" | "rejected" };
+
+  if (!["pending", "accepted", "rejected"].includes(status)) {
+    return NextResponse.json({ error: "Invalid body" }, { status: 400 });
+  }
 
   const oldStatus = proposals[idx].status;
   proposals[idx].status = status;
