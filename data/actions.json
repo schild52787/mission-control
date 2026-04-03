@@ -78,7 +78,7 @@
     "priority": "low",
     "title": "Schedule Doctor Appointment — Adderall Efficacy",
     "detail": "50mg/day losing efficacy over last 6 months. Worth discussing with prescriber.",
-    "completed": false,
-    "completedAt": null
+    "completed": true,
+    "completedAt": "2026-04-03T14:06:34.710Z"
   }
 ]
