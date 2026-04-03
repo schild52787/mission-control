@@ -205,7 +205,8 @@
     "effort": "high",
     "status": "accepted",
     "createdAt": "2026-04-02",
-    "decidedAt": "2026-04-02"
+    "decidedAt": "2026-04-02",
+    "order": 2000
   },
   {
     "id": "prop-029",
@@ -329,7 +330,8 @@
     "effort": "high",
     "status": "accepted",
     "createdAt": "2026-04-02",
-    "decidedAt": "2026-04-02"
+    "decidedAt": "2026-04-02",
+    "order": 3000
   },
   {
     "id": "prop-036",
