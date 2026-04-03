@@ -12,8 +12,8 @@
     "priority": "high",
     "title": "Attach Chrome Extension (Browser Relay)",
     "detail": "Required for Points Monitor live award scraping — Delta, Amex, AwardFares. Click OpenClaw toolbar icon on a tab to attach.",
-    "completed": false,
-    "completedAt": null
+    "completed": true,
+    "completedAt": "2026-04-03T14:06:19.039Z"
   },
   {
     "id": "melissa-choices",
