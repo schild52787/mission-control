@@ -4,7 +4,7 @@ import { useState, useCallback, useEffect, useRef } from "react";
 import Sidebar from "@/components/Sidebar";
 import ProjectsPanel from "@/components/ProjectsPanel";
 import ActionsPanel from "@/components/ActionsPanel";
-import DailySummaryPanel from "@/components/DailySummaryPanel";
+import NewsPanel from "@/components/NewsPanel";
 import ProposalsPanel from "@/components/ProposalsPanel";
 import MomFlightsWidget from "@/components/MomFlightsWidget";
 import CalendarPanel from "@/components/CalendarPanel";
@@ -127,8 +127,8 @@ export default function MissionControlPage() {
           {/* Left column (wider) */}
           <div className="xl:col-span-3 space-y-6">
             <section id="daily-summary" className="card transition-all duration-300">
-              <h2 className="section-header">Daily Summary</h2>
-              <DailySummaryPanel refreshTrigger={refreshTrigger} />
+              <h2 className="section-header">News Feed</h2>
+              <NewsPanel />
             </section>
 
             <section id="projects" className="card transition-all duration-300">
