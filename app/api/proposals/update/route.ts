@@ -24,7 +24,9 @@ interface Proposal {
 }
 
 type PatchBody =
-  | { id: string; status: "pending" | "accepted" | "rejected" }
+  | { id: string; status: "pending" | "accepted" | "rejected"; order?: number }
+  | { id: string; status: "deployed"; builtAt: string }
+  | { id: string; order: number }
   | { id: string; deleted: true };
 
 function readProposals(): Proposal[] {
