@@ -338,7 +338,7 @@
     "category": "personal",
     "emoji": "\ud83c\udf10",
     "title": "Geopolitical Risk \u2192 Market Impact Engine",
-    "description": "Monitors geopolitical events in real-time, maps them to affected sectors and tickers, and quantifies historical market reactions to similar events. Iran closes Strait of Hormuz \u2192 instantly shows what oil, defense, shipping ETFs did last 3 times this happened. Uses free data sources only.",
+    "description": "Monitors geopolitical events in real-time, maps them to affected sectors and tickers, and quantifies historical market reactions to similar events. Iran closes Strait of Hormuz \u2192 instantly shows what oil, defense, shipping ETFs did last 3 times this happened. Uses free data sources only.\n\nCost: \ud83d\udfe2 Free \u2014 yfinance, FRED, Brave Search (all free)",
     "stack": [
       "Next.js",
       "TypeScript",
@@ -356,7 +356,7 @@
     "category": "personal",
     "emoji": "\ud83c\udfe0",
     "title": "Real Estate Deal Finder & Underwriter",
-    "description": "Scans Zillow/Redfin for off-market signals, price reductions, and undervalued properties. Auto-underwrites each deal: cap rate, cash-on-cash return, 10-year IRR at different assumptions. Rent estimates, vacancy rates, mortgage calculators. All free data sources.",
+    "description": "Scans Zillow/Redfin for off-market signals, price reductions, and undervalued properties. Auto-underwrites each deal: cap rate, cash-on-cash return, 10-year IRR at different assumptions. Rent estimates, vacancy rates, mortgage calculators. All free data sources.\n\nCost: \ud83d\udfe2 Free \u2014 Zillow/Redfin public data, no paid API needed",
     "stack": [
       "Next.js",
       "TypeScript",
@@ -373,7 +373,7 @@
     "category": "personal",
     "emoji": "\ud83e\udd16",
     "title": "AI Company Tracker \u2014 Private Market Intelligence",
-    "description": "Monitors every AI startup getting funded, acquired, or building something significant before it's mainstream. Tracks Crunchbase funding rounds, YC batches, patent filings, GitHub repository growth, hiring signals. Surfaces 'this company is about to be a big deal' 6-12 months early.",
+    "description": "Monitors every AI startup getting funded, acquired, or building something significant before it's mainstream. Tracks Crunchbase funding rounds, YC batches, patent filings, GitHub repository growth, hiring signals. Surfaces 'this company is about to be a big deal' 6-12 months early.\n\nCost: \ud83d\udfe2 Free \u2014 Crunchbase free tier, GitHub API free, Brave Search",
     "stack": [
       "Next.js",
       "TypeScript",
@@ -391,7 +391,7 @@
     "category": "personal",
     "emoji": "\ud83d\udcca",
     "title": "Earnings Intelligence Platform",
-    "description": "Deep earnings analysis \u2014 not just beat/miss, but what the market is pricing in before earnings, historical reaction patterns, whisper vs consensus numbers, options implied move. Pre-earnings brief for any ticker: here's what to expect and what the trade looks like. All free data via yfinance + SEC EDGAR.",
+    "description": "Deep earnings analysis \u2014 not just beat/miss, but what the market is pricing in before earnings, historical reaction patterns, whisper vs consensus numbers, options implied move. Pre-earnings brief for any ticker: here's what to expect and what the trade looks like. All free data via yfinance + SEC EDGAR.\n\nCost: \ud83d\udfe2 Free \u2014 yfinance, SEC EDGAR, Yahoo Finance options data (all free)",
     "stack": [
       "Next.js",
       "TypeScript",
@@ -409,7 +409,7 @@
     "category": "personal",
     "emoji": "\ud83d\udd0c",
     "title": "MCP Server Marketplace & Builder",
-    "description": "Platform to build, test, deploy, and browse MCP servers \u2014 think npm for AI tools. You're already building MCPs. This gives you a UI to manage them, test tool calls interactively, and publish. Early mover advantage as MCP adoption explodes.",
+    "description": "Platform to build, test, deploy, and browse MCP servers \u2014 think npm for AI tools. You're already building MCPs. This gives you a UI to manage them, test tool calls interactively, and publish. Early mover advantage as MCP adoption explodes.\n\nCost: \ud83d\udfe2 Free \u2014 pure build, no external data needed",
     "stack": [
       "Next.js",
       "TypeScript",
@@ -426,7 +426,7 @@
     "category": "personal",
     "emoji": "\u2708\ufe0f",
     "title": "Italy Trip Operations Center",
-    "description": "Prioritized countdown to Aug 11: what needs booking this week vs next month. Tracks GUC upgrade availability on DL298, restaurant reservation status (Felice a Testaccio, Osteria alle Testiere), day-by-day itinerary builder, packing lists, weather per city. Daily nudge on open items.",
+    "description": "Prioritized countdown to Aug 11: what needs booking this week vs next month. Tracks GUC upgrade availability on DL298, restaurant reservation status (Felice a Testaccio, Osteria alle Testiere), day-by-day itinerary builder, packing lists, weather per city. Daily nudge on open items.\n\nCost: \ud83d\udfe2 Free \u2014 Delta public data, Brave Search",
     "stack": [
       "Next.js",
       "TypeScript",
