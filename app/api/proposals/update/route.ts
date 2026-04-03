@@ -13,12 +13,14 @@ interface Proposal {
   description: string;
   stack: string[];
   effort: "low" | "medium" | "high";
-  status: "pending" | "accepted" | "rejected";
+  status: "pending" | "accepted" | "rejected" | "deployed";
   createdAt: string;
   decidedAt?: string;
   port?: number;
   deleted?: boolean;
   deletedAt?: string;
+  order?: number;
+  builtAt?: string;
 }
 
 type PatchBody =
