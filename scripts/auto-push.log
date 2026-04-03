@@ -177,3 +177,11 @@ To https://github.com/schild52787/mission-control.git
    89dca2d..71cea15  main -> main
 [2026-04-02 19:37:50] Pushed to GitHub
 [2026-04-02 19:37:55] Changes detected, committing...
+[main 0025c1e] Auto-update: 2026-04-02 19:37:55
+ 3 files changed, 49 insertions(+)
+ create mode 100644 app/api/projects/hidden/route.ts
+ create mode 100644 data/hidden-projects.json
+To https://github.com/schild52787/mission-control.git
+   71cea15..0025c1e  main -> main
+[2026-04-02 19:37:55] Pushed to GitHub
+[2026-04-02 19:38:13] Changes detected, committing...
