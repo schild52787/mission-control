@@ -42,6 +42,7 @@ export default function ProposalsKanban() {
   const [dragId, setDragId] = useState<string | null>(null);
   const [dragOver, setDragOver] = useState<Status | null>(null);
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
+  const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
 
   const dragIdRef = useRef(dragId);
   dragIdRef.current = dragId;
@@ -57,7 +58,6 @@ export default function ProposalsKanban() {
   useEffect(() => { void load(); }, [load]);
 
   const updateStatus = useCallback(async (id: string, status: Status) => {
-    // Optimistic update
     setProposals((prev) =>
       prev.map((p) => (p.id === id ? { ...p, status, decidedAt: status !== "pending" ? new Date().toISOString().slice(0, 10) : undefined } : p))
     );
@@ -68,7 +68,20 @@ export default function ProposalsKanban() {
         body: JSON.stringify({ id, status }),
       });
     } catch {
-      // Revert on failure
+      await load();
+    }
+  }, [load]);
+
+  const handleDelete = useCallback(async (id: string) => {
+    setProposals((prev) => prev.filter((p) => p.id !== id));
+    setConfirmDeleteId(null);
+    try {
+      await fetch("/api/proposals/update", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id, deleted: true }),
+      });
+    } catch {
       await load();
     }
   }, [load]);
@@ -81,12 +94,10 @@ export default function ProposalsKanban() {
     });
   }, []);
 
-  // Drag handlers
   const onDragStart = useCallback((e: React.DragEvent, id: string) => {
     setDragId(id);
     e.dataTransfer.effectAllowed = "move";
     e.dataTransfer.setData("text/plain", id);
-    // Add slight delay for visual feedback
     requestAnimationFrame(() => {
       const el = document.getElementById(`card-${id}`);
       if (el) el.style.opacity = "0.5";
@@ -197,10 +208,38 @@ export default function ProposalsKanban() {
                     isRejected ? "opacity-55" : ""
                   } ${dragId === p.id ? "shadow-xl scale-[1.02]" : ""}`}
                 >
+                  {/* Delete button */}
+                  <button
+                    onClick={(e) => { e.stopPropagation(); setConfirmDeleteId(p.id); }}
+                    className="absolute top-2.5 right-7 text-[#9ca3af] hover:text-[#dc2626] opacity-0 group-hover:opacity-100 transition-opacity text-sm w-5 h-5 flex items-center justify-center rounded hover:bg-red-50"
+                    title="Remove proposal"
+                  >
+                    &times;
+                  </button>
+
                   {/* Drag handle */}
                   <div className="absolute top-3 right-2.5 text-[#d1d5db] opacity-0 group-hover:opacity-100 transition-opacity text-sm select-none pointer-events-none">
-                    ⠿
+                    &#10303;
                   </div>
+
+                  {/* Confirm delete overlay */}
+                  {confirmDeleteId === p.id && (
+                    <div className="absolute inset-0 bg-white/95 rounded-lg flex items-center justify-center gap-3 z-10 border border-red-200">
+                      <span className="text-xs font-medium text-[#111827]">Remove?</span>
+                      <button
+                        onClick={() => handleDelete(p.id)}
+                        className="text-xs font-bold text-white bg-[#dc2626] hover:bg-red-700 px-2.5 py-1 rounded transition-colors"
+                      >
+                        Yes
+                      </button>
+                      <button
+                        onClick={() => setConfirmDeleteId(null)}
+                        className="text-xs font-medium text-[#6b7280] hover:text-[#111827] px-2 py-1 rounded border border-[#e5e7eb] transition-colors"
+                      >
+                        No
+                      </button>
+                    </div>
+                  )}
 
                   {/* Title row */}
                   <div className="flex items-start gap-2 pr-5">
