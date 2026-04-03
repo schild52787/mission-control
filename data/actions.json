@@ -1,0 +1,84 @@
+[
+  {
+    "id": "gateway-fix",
+    "priority": "high",
+    "title": "Fix OpenClaw Gateway",
+    "detail": "Gateway token mismatch blocks sub-agent spawning + push alerts. Run this on Mac Mini:",
+    "completed": false,
+    "completedAt": null
+  },
+  {
+    "id": "chrome-extension",
+    "priority": "high",
+    "title": "Attach Chrome Extension (Browser Relay)",
+    "detail": "Required for Points Monitor live award scraping \u2014 Delta, Amex, AwardFares. Click OpenClaw toolbar icon on a tab to attach.",
+    "completed": false,
+    "completedAt": null
+  },
+  {
+    "id": "melissa-choices",
+    "priority": "high",
+    "title": "Melissa: Select 2 Remaining Diamond Choice Benefits",
+    "detail": "1/3 used ($700 Amex credit). Recommendation: 4 GUCs + $500 Delta Vacations credit. Select in Fly Delta app.",
+    "urlLabel": "Fly Delta app",
+    "deadline": "Jan 31, 2027",
+    "completed": false,
+    "completedAt": null
+  },
+  {
+    "id": "italy-route",
+    "priority": "medium",
+    "title": "Italy Route Decision \u2014 Melissa Picks A, B, or C",
+    "detail": "Brochure is live. Once she picks, hotels can be booked. Aug 12\u201326 flights confirmed (GIXFOB).",
+    "url": "https://schild52787.github.io/italy-2026/",
+    "urlLabel": "View Italy Brochure",
+    "completed": false,
+    "completedAt": null
+  },
+  {
+    "id": "felice-booking",
+    "priority": "medium",
+    "title": "Book Felice a Testaccio \u2014 Rome",
+    "detail": "August fills weeks in advance. Book directly via feliceatestaccio.com ASAP.",
+    "url": "https://feliceatestaccio.com",
+    "urlLabel": "feliceatestaccio.com",
+    "deadline": "ASAP",
+    "completed": false,
+    "completedAt": null
+  },
+  {
+    "id": "amalfi-boat",
+    "priority": "medium",
+    "title": "Book Amalfi Coast Boat Charter",
+    "detail": "Private charter \u20ac839\u20131,049 from Marina Piccola, Sorrento. 2026 peak season books out early.",
+    "url": "https://sorrentoinsider.com/boat-tours",
+    "urlLabel": "sorrentoinsider.com",
+    "deadline": "ASAP",
+    "completed": false,
+    "completedAt": null
+  },
+  {
+    "id": "companion-certs",
+    "priority": "medium",
+    "title": "Check Companion Cert Expiration Dates",
+    "detail": "Kyle: Delta Platinum Amex cert. Melissa: Delta Reserve Amex cert. Both valid US/Caribbean/Central America. Check expiry in each app.",
+    "completed": false,
+    "completedAt": null
+  },
+  {
+    "id": "points-routes",
+    "priority": "low",
+    "title": "Points Monitor: Confirm Routes to Watch",
+    "detail": "MSP\u2192CUN + MSP\u2192MCO pre-loaded. Add others? (SJD, MBJ, PUJ?) Confirm school break trip timing: Winter break Dec 23\u2013Jan 4, Spring break Mar 29\u2013Apr 5.",
+    "completed": false,
+    "completedAt": null
+  },
+  {
+    "id": "adderall-dr",
+    "priority": "low",
+    "title": "Schedule Doctor Appointment \u2014 Adderall Efficacy",
+    "detail": "50mg/day losing efficacy over last 6 months. Worth discussing with prescriber.",
+    "completed": false,
+    "completedAt": null
+  }
+]
