@@ -62,16 +62,16 @@
     "priority": "medium",
     "title": "Check Companion Cert Expiration Dates",
     "detail": "Kyle: Delta Platinum Amex cert. Melissa: Delta Reserve Amex cert. Both valid US/Caribbean/Central America. Check expiry in each app.",
-    "completed": false,
-    "completedAt": null
+    "completed": true,
+    "completedAt": "2026-04-03T14:06:30.381Z"
   },
   {
     "id": "points-routes",
     "priority": "low",
     "title": "Points Monitor: Confirm Routes to Watch",
     "detail": "MSP→CUN + MSP→MCO pre-loaded. Add others? (SJD, MBJ, PUJ?) Confirm school break trip timing: Winter break Dec 23–Jan 4, Spring break Mar 29–Apr 5.",
-    "completed": false,
-    "completedAt": null
+    "completed": true,
+    "completedAt": "2026-04-03T14:06:32.449Z"
   },
   {
     "id": "adderall-dr",
