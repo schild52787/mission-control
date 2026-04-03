@@ -57,7 +57,19 @@ export async function GET() {
     writeProposals(cleaned);
   }
 
-  return NextResponse.json(cleaned.filter((p) => !(p as Proposal & { deleted?: boolean }).deleted));
+  const visible = cleaned.filter(
+    (p) => !(p as Proposal & { deleted?: boolean }).deleted && p.status !== "deployed"
+  );
+
+  // Sort accepted by order ASC; others retain file order
+  return NextResponse.json(
+    visible.map((p) => p).sort((a, b) => {
+      if (a.status === "accepted" && b.status === "accepted") {
+        return (a.order ?? 999) - (b.order ?? 999);
+      }
+      return 0;
+    })
+  );
 }
 
 export async function POST(request: Request) {
