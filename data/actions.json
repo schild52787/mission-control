@@ -32,8 +32,8 @@
     "detail": "Brochure is live. Once she picks, hotels can be booked. Aug 12–26 flights confirmed (GIXFOB).",
     "url": "https://schild52787.github.io/italy-2026/",
     "urlLabel": "View Italy Brochure",
-    "completed": false,
-    "completedAt": null
+    "completed": true,
+    "completedAt": "2026-04-03T14:06:23.241Z"
   },
   {
     "id": "felice-booking",
@@ -43,8 +43,8 @@
     "url": "https://feliceatestaccio.com",
     "urlLabel": "feliceatestaccio.com",
     "deadline": "ASAP",
-    "completed": false,
-    "completedAt": null
+    "completed": true,
+    "completedAt": "2026-04-03T14:06:26.583Z"
   },
   {
     "id": "amalfi-boat",
