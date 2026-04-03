@@ -13,6 +13,8 @@ interface Proposal {
   status: "pending" | "accepted" | "rejected";
   createdAt: string;
   decidedAt?: string;
+  order?: number;
+  builtAt?: string;
 }
 
 type Status = "pending" | "accepted" | "rejected";
@@ -36,6 +38,38 @@ const categoryConfig: Record<string, { bg: string; text: string; border: string 
   family: { bg: "bg-orange-50", text: "text-orange-600", border: "border-orange-200" },
 };
 
+function recalculateAcceptedOrder(
+  proposals: Proposal[],
+  draggedId: string,
+  targetCardId: string | null
+): Proposal[] {
+  const accepted = proposals
+    .filter((p) => p.status === "accepted" && p.id !== draggedId)
+    .sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
+
+  let insertIndex: number;
+  if (targetCardId === null) {
+    insertIndex = accepted.length;
+  } else {
+    insertIndex = accepted.findIndex((p) => p.id === targetCardId);
+    if (insertIndex === -1) insertIndex = accepted.length;
+  }
+
+  const dragged = proposals.find((p) => p.id === draggedId)!;
+  accepted.splice(insertIndex, 0, dragged);
+
+  const updatedOrders: Record<string, number> = {};
+  accepted.forEach((p, i) => {
+    updatedOrders[p.id] = (i + 1) * 1000;
+  });
+
+  return proposals.map((p) =>
+    updatedOrders[p.id] !== undefined
+      ? { ...p, order: updatedOrders[p.id] }
+      : p
+  );
+}
+
 export default function ProposalsKanban() {
   const [proposals, setProposals] = useState<Proposal[]>([]);
   const [loading, setLoading] = useState(true);
@@ -43,6 +77,8 @@ export default function ProposalsKanban() {
   const [dragOver, setDragOver] = useState<Status | null>(null);
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
   const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
+  const [dragOverCardId, setDragOverCardId] = useState<string | null>(null);
+  const [confirmBuiltId, setConfirmBuiltId] = useState<string | null>(null);
 
   const dragIdRef = useRef(dragId);
   dragIdRef.current = dragId;
@@ -66,6 +102,33 @@ export default function ProposalsKanban() {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id, status }),
+      });
+    } catch {
+      await load();
+    }
+  }, [load]);
+
+  const updateOrder = useCallback(async (id: string, order: number) => {
+    try {
+      await fetch("/api/proposals/update", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id, order }),
+      });
+    } catch {
+      await load();
+    }
+  }, [load]);
+
+  const markBuilt = useCallback(async (id: string) => {
+    const today = new Date().toISOString().slice(0, 10);
+    setProposals((prev) => prev.filter((p) => p.id !== id));
+    setConfirmBuiltId(null);
+    try {
+      await fetch("/api/proposals/update", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id, status: "deployed", builtAt: today }),
       });
     } catch {
       await load();
@@ -96,6 +159,7 @@ export default function ProposalsKanban() {
 
   const onDragStart = useCallback((e: React.DragEvent, id: string) => {
     setDragId(id);
+    setConfirmBuiltId(null);
     e.dataTransfer.effectAllowed = "move";
     e.dataTransfer.setData("text/plain", id);
     requestAnimationFrame(() => {
@@ -111,6 +175,7 @@ export default function ProposalsKanban() {
     }
     setDragId(null);
     setDragOver(null);
+    setDragOverCardId(null);
   }, []);
 
   const onDragOverColumn = useCallback((e: React.DragEvent, status: Status) => {
@@ -123,22 +188,80 @@ export default function ProposalsKanban() {
     setDragOver(null);
   }, []);
 
+  const onDragOverCard = useCallback((e: React.DragEvent, cardId: string, colStatus: Status) => {
+    if (colStatus !== "accepted") return;
+    e.preventDefault();
+    e.stopPropagation();
+    setDragOverCardId(cardId);
+  }, []);
+
+  const onDragLeaveCard = useCallback(() => {
+    setDragOverCardId(null);
+  }, []);
+
   const onDrop = useCallback((e: React.DragEvent, targetStatus: Status) => {
     e.preventDefault();
     const id = e.dataTransfer.getData("text/plain");
-    if (id) {
-      const proposal = proposals.find((p) => p.id === id);
-      if (proposal && proposal.status !== targetStatus) {
+    if (!id) { setDragOver(null); setDragId(null); return; }
+
+    const proposal = proposals.find((p) => p.id === id);
+    if (!proposal) { setDragOver(null); setDragId(null); return; }
+
+    if (proposal.status === targetStatus) {
+      // WITHIN-COLUMN DROP (only meaningful in Accepted)
+      if (targetStatus === "accepted") {
+        const targetCardId = dragOverCardId;
+        const updated = recalculateAcceptedOrder(proposals, id, targetCardId);
+        setProposals(updated);
+
+        const acceptedUpdated = updated.filter((p) => p.status === "accepted");
+        acceptedUpdated.forEach((p) => {
+          void updateOrder(p.id, p.order ?? 999);
+        });
+      }
+    } else {
+      // CROSS-COLUMN DROP
+      if (targetStatus === "accepted") {
+        const maxOrder = Math.max(
+          0,
+          ...proposals.filter((p) => p.status === "accepted").map((p) => p.order ?? 0)
+        );
+        const newOrder = maxOrder + 1000;
+        setProposals((prev) =>
+          prev.map((p) =>
+            p.id === id
+              ? { ...p, status: targetStatus, order: newOrder, decidedAt: new Date().toISOString().slice(0, 10) }
+              : p
+          )
+        );
+        void (async () => {
+          try {
+            await fetch("/api/proposals/update", {
+              method: "PATCH",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ id, status: targetStatus, order: newOrder }),
+            });
+          } catch {
+            await load();
+          }
+        })();
+      } else {
         void updateStatus(id, targetStatus);
       }
     }
+
+    setDragOverCardId(null);
     setDragOver(null);
     setDragId(null);
-  }, [proposals, updateStatus]);
+  }, [proposals, updateStatus, updateOrder, dragOverCardId, load]);
 
   const grouped = COLUMNS.map((col) => ({
     ...col,
-    items: proposals.filter((p) => p.status === col.status),
+    items: col.status === "accepted"
+      ? proposals
+          .filter((p) => p.status === "accepted")
+          .sort((a, b) => (a.order ?? 999) - (b.order ?? 999))
+      : proposals.filter((p) => p.status === col.status),
   }));
 
   if (loading) {
@@ -204,10 +327,19 @@ export default function ProposalsKanban() {
                   draggable
                   onDragStart={(e) => onDragStart(e, p.id)}
                   onDragEnd={onDragEnd}
+                  onDragOver={(e) => onDragOverCard(e, p.id, col.status)}
+                  onDragLeave={onDragLeaveCard}
                   className={`group relative bg-white rounded-lg border border-[#e5e7eb] p-3.5 cursor-grab active:cursor-grabbing transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 ${
                     isRejected ? "opacity-55" : ""
-                  } ${dragId === p.id ? "shadow-xl scale-[1.02]" : ""}`}
+                  } ${dragId === p.id ? "shadow-xl scale-[1.02]" : ""} ${dragOverCardId === p.id && col.status === "accepted" ? "border-t-2 border-t-[#16a34a]" : ""}`}
                 >
+                  {/* Priority badge — Accepted column only */}
+                  {col.status === "accepted" && (
+                    <span className="absolute -top-2 -left-2 z-10 text-[9px] font-bold bg-[#16a34a] text-white px-1.5 py-0.5 rounded-full shadow-sm">
+                      #{col.items.findIndex((item) => item.id === p.id) + 1}
+                    </span>
+                  )}
+
                   {/* Delete button */}
                   <button
                     onClick={(e) => { e.stopPropagation(); setConfirmDeleteId(p.id); }}
@@ -273,6 +405,37 @@ export default function ProposalsKanban() {
                           {s}
                         </span>
                       ))}
+                    </div>
+                  )}
+
+                  {/* Mark as Built — Accepted column only */}
+                  {col.status === "accepted" && (
+                    <div className="mt-2">
+                      {confirmBuiltId === p.id ? (
+                        <div className="flex items-center gap-2">
+                          <span className="text-[10px] text-[#374151] font-medium">Mark as built?</span>
+                          <button
+                            onClick={(e) => { e.stopPropagation(); void markBuilt(p.id); }}
+                            className="text-[10px] font-bold text-white bg-[#16a34a] hover:bg-green-700 px-2 py-0.5 rounded transition-colors"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            onClick={(e) => { e.stopPropagation(); setConfirmBuiltId(null); }}
+                            className="text-[10px] font-medium text-[#6b7280] hover:text-[#111827] px-2 py-0.5 rounded border border-[#e5e7eb] transition-colors"
+                          >
+                            No
+                          </button>
+                        </div>
+                      ) : (
+                        <button
+                          onClick={(e) => { e.stopPropagation(); setConfirmBuiltId(p.id); }}
+                          className="text-[10px] font-medium text-[#16a34a] hover:text-green-700 hover:bg-green-50 px-2 py-0.5 rounded border border-green-200 transition-colors flex items-center gap-1"
+                        >
+                          <span>&#10003;</span>
+                          <span>Mark Built</span>
+                        </button>
+                      )}
                     </div>
                   )}
 
