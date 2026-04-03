@@ -55,7 +55,7 @@ export async function GET() {
     writeProposals(cleaned);
   }
 
-  return NextResponse.json(cleaned.filter((p: Record<string, unknown>) => !p.deleted));
+  return NextResponse.json(cleaned.filter((p) => !(p as Proposal & { deleted?: boolean }).deleted));
 }
 
 export async function POST(request: Request) {
