@@ -139,7 +139,9 @@
   {
     "id": "prop-035",
     "title": "Multi-Agent Autonomous Research System",
-    "status": "building",
-    "startedAt": "2026-04-02T23:56:02.861148+00:00"
+    "status": "done",
+    "startedAt": "2026-04-02T23:56:02.861148+00:00",
+    "completedAt": "2026-04-03T00:00:34.095632+00:00",
+    "port": 3018
   }
 ]
